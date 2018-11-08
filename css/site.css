@@ -17,69 +17,69 @@ header {
  }
 .whole-container {
     display: grid;
-    grid-template-columns: 65px 665px ;
-    grid-template-rows: 520px 86px ;
+    grid-template-columns: 65px 1fr ;
+    grid-template-rows: 500px;
+    margin-top: 45px;
+    align-items: end;
+}
 
+.y-axis {
+    align-self:center;
+    margin-top: 115px;
 }
 
 .y-axis > p {
+    
     transform: rotate(-90deg);
-    transform-origin: left center 50; 
-    margin-top: 270px;
     font-size: 40px;
+    color: blanchedalmond;
+
+
 }
 .BarHolder { 
-    margin-top:45px;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(100,1fr);
+    grid-template-columns: repeat(10, 110px);
+    grid-template-rows: auto 70px;
     grid-column-gap: 5px;
+    text-align: center;
     height: 70vh;
-    width: 40vw;
+    width: 90vw;
+    justify-items: center;
     padding: 5px 10px;
-    margin-left: 50;
-    /* justify-items: center; */
-    background:white;
+    align-items: end;
+    background: black;
+    animation-name: checking;
+    animation-duration: ease 4s;
 }
 
+
+
 .BarHolder-label {
-    grid-row-start: 101;
-    color: blue;
+    grid-row-start: 2;
+    color: white;
 }
+@keyframes checking {
+    from {background-color: blue;}
+    to {background-color: purple;}
+}
+
 @keyframes example {
     from {background-color: red;}
     to {background-color: yellow;}
 }
-[class*="bar"] {    
-    grid-row-end: 101;
+[class*="bar"] {  
+    width: 30px;  
     border-radius: 5px 5px 0 0;
     background-color: #ff4136;
-    animation-name: example;
-    animation-duration: 4s;
-    animation-timing-function: ease-in-out;
-    animation-direction: reverse;
     text-align: center;
+    animation: html5 2s ease;
+}
+[class*="bar"]:hover {  
+  animation: example 2s ease;  
 }
 
-.x-axis {
-    grid-column: 2;
-    margin-left: -80px;
-    text-align: center;
-    font-size: 40px;
-}
-.description {
-    grid-column: 3;
-    grid-row: 1;
-    margin-top:45px;
+@keyframes html5 { 
+  0%  { height :0px;} 
+  100%{ height:100%;}  
 }
 
-.moreArtist {
-    display: flex;
-    flex-direction: row;
-    margin: 20px;
-    background: bisque;
-}
-
-.artistCard{
-    margin: 10px;
-}

@@ -1,0 +1,22 @@
+.x-axis {
+    grid-column: 2;
+    text-align: center;
+    font-size: 40px;
+}
+
+.description {
+    grid-column: 3;
+    grid-row: 1;
+    margin-top:45px;
+}
+
+.moreArtist {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    background: bisque;
+}
+
+.artistCard{
+    margin: 10px;
+}
