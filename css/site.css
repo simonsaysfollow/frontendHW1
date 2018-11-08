@@ -38,7 +38,7 @@ header {
     width: 40vw;
     padding: 5px 10px;
     margin-left: 50;
-    justify-items: center;
+    /* justify-items: center; */
     background:white;
 }
 
@@ -46,11 +46,18 @@ header {
     grid-row-start: 101;
     color: blue;
 }
-
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
 [class*="bar"] {    
     grid-row-end: 101;
     border-radius: 5px 5px 0 0;
     background-color: #ff4136;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-direction: reverse;
     text-align: center;
 }
 
@@ -64,4 +71,15 @@ header {
     grid-column: 3;
     grid-row: 1;
     margin-top:45px;
+}
+
+.moreArtist {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    background: bisque;
+}
+
+.artistCard{
+    margin: 10px;
 }
