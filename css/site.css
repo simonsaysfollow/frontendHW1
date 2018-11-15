@@ -9,7 +9,7 @@ html,body {
 header {
     display: grid;
     grid-template-columns: 1fr 33% 1fr;
-    background: blanchedalmond;
+    background: grey;
 }
 .title-of-page {
     grid-column: 2;
@@ -38,8 +38,8 @@ header {
 }
 .BarHolder { 
     display: grid;
-    grid-template-columns: repeat(10, 110px);
-    grid-template-rows: auto 70px;
+    grid-template-columns: repeat(10, 115px);
+    grid-template-rows: auto 60px;
     grid-column-gap: 5px;
     text-align: center;
     height: 70vh;
@@ -47,17 +47,30 @@ header {
     justify-items: center;
     padding: 5px 10px;
     align-items: end;
-    background: black;
+    background: white;
     animation-name: checking;
     animation-duration: ease 4s;
+
 }
-
-
 
 .BarHolder-label {
     grid-row-start: 2;
-    color: white;
+    color: black;
+    text-align: center;
 }
+
+[class*="bar"] {  
+    width: 40px;  
+    border-radius: 5px 5px 0 0;
+    background-color: #ff4136;
+    text-align: center;
+    animation: html5 2s ease;
+}
+[class*="bar"]:hover {  
+  animation:  example 2s ease;  
+
+}
+
 @keyframes checking {
     from {background-color: blue;}
     to {background-color: purple;}
@@ -67,19 +80,126 @@ header {
     from {background-color: red;}
     to {background-color: yellow;}
 }
-[class*="bar"] {  
-    width: 30px;  
-    border-radius: 5px 5px 0 0;
-    background-color: #ff4136;
-    text-align: center;
-    animation: html5 2s ease;
-}
-[class*="bar"]:hover {  
-  animation: example 2s ease;  
-}
 
 @keyframes html5 { 
   0%  { height :0px;} 
   100%{ height:100%;}  
 }
+
+.artist-Artist {
+    display: grid;
+    grid-template-columns: repeat(4, 330px) ; 
+    grid-gap: 5px;
+    background:transparent;   
+
+}
+
+.descriptions {
+    /* background:lightblue;  */
+    justify-self: center;
+    
+}
+
+.descriptions > p {
+    text-align: center;
+ 
+}
+
+.imgDescription {
+    width: 250px;
+    height: 250px;
+    margin-top: 15px;
+}
+
+.hiddenWords {
+    /* visibility: hidden; */
+   opacity: 0;
+}
+
+.hiddenWords:hover{
+    opacity: 1;
+    color: white; 
+}
+
+.artist-Artist-Artist {
+    display: grid;
+    grid-template-columns: repeat(4, 330px) ; 
+    grid-gap: 5px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    
+}
+
+
+.first {
+    height: auto;
+}
+
+/* .second {
+    height: 40%;
+}
+
+.third {
+    height: 20%;
+}
+
+.fourth {
+    height: 80%; 
+}
+
+.fifth {
+    height: 80%; 
+
+}
+
+.sixth {
+    height: 80%; 
+}
+
+.seventh {
+    height: 80%; 
+}
+
+.eighth {
+    height: 80%; 
+}
+
+.ninth {
+    height: 80%; 
+}
+
+.tenth {
+   height: 80%; 
+} */
+
+/* .firstLabel {
+
+}
+.secondLabel {
+
+}
+.thirdLabel {
+
+}
+.fourthLabel {
+
+}
+.fifthLabel {
+
+}
+.sixthLabel {
+
+}
+.seventhLabel{
+
+}
+.eighthLabel {
+
+}
+.ninthLabel {
+
+}
+.tenthLabel {
+
+} */
 

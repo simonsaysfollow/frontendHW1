@@ -13,13 +13,45 @@ function callCompare() {
     }
 }
 
-function callingAPI() {
-    console.log("works")
-    var request = new XMLHttpRequest();
-    request.open("GET", "https://api.spotify.com/v1/artists/9c518b1302614307b8152c7fd3714b56","Authorization: Bearer {8885ba82b5be499cb0a9a8e2613f6302}");
-    request.onload = function () {
-        var data = JSON.parse(this.response);
-        console.log(data)
-    }
-    request.send();
+function selected() {
+    var itemSelected = document.querySelector("#selection").value;
+    console.log(itemSelected)
 }
+
+function callingAPI() {
+    // random function
+
+    let itemRandomHolder = [];
+    let count = 0;
+    fetch("storeData.json")
+
+    .then(response => response.json())
+    .then(data => {
+
+        while(count !=10){
+            let random = data['data'][Math.floor(Math.random() * data['data'].length)];
+            count++;
+            itemRandomHolder.push(random)
+        }
+        console.log(itemRandomHolder)
+        
+        for(let item of itemRandomHolder){
+
+            let contain =  document.querySelector('.BarHolder')
+            let div = document.createElement("div")
+            div.className = "BarHolder-label";
+            div.innerHTML = item['name']
+            contain.appendChild(div)
+            let make = document.createElement("div");
+            make.className ="BarHolder-bar first"
+            make.innerHTML = item['abv']+"%"
+            make.style.height = item['abv'] + "%"
+            contain.appendChild(make)
+
+        }
+    })
+
+   
+}
+
+callingAPI();
